@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Registration - Department of Student Affairs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="registration-container">
+        <div class="logo">
+            <h1>Department of Student Affairs</h1>
+            <p>Club Registration</p>
+        </div>
+        <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbwhA5Tot07a_wc6JSPhfiUfcz6A02Fjyub2PMoQw3ehdJc1fmFFvqZG_xKe0SRU_5Vs/exec" method="POST">
+            <div class="form-group">
+                <label for="fullName">Full Name (as per SSLC record) *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                <div class="error" id="fullNameError">Full name is required</div>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" required>
+                <div class="error" id="dobError">Date of birth is required</div>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number *</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number" pattern="[0-9]{10}" required>
+                <div class="error" id="phoneNumberError">Enter a valid 10-digit number</div>
+            </div>
+            <div class="form-group">
+                <label for="whatsappNumber">WhatsApp Number *</label>
+                <input type="tel" id="whatsappNumber" name="whatsappNumber" placeholder="Enter WhatsApp number" pattern="[0-9]{10}" required>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="sameAsPhone" name="sameAsPhone">
+                    <label for="sameAsPhone">Same as Phone Number</label>
+                </div>
+                <div class="error" id="whatsappNumberError">Enter a valid 10-digit number</div>
+            </div>
+            <div class="form-group">
+                <label for="department">School / Department *</label>
+                <select id="department" name="department" required>
+                    <option value="" disabled selected>Select a department</option>
+                    <option value="School of Engineering">School of Engineering</option>
+                    <option value="School of Management">School of Management</option>
+                    <option value="School of Applied Science">School of Applied Science</option>
+                </select>
+                <div class="error" id="departmentError">Department is required</div>
+            </div>
+            <div class="form-group">
+                <label for="course">Branch / Course *</label>
+                <select id="course" name="course" required>
+                    <option value="" disabled selected>Select a branch/course</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="AI-ML">AI-ML</option>
+                    <option value="AI-DS">AI-DS</option>
+                    <option value="Computer Science Engineering">Computer Science Engineering</option>
+                    <option value="EEE">EEE</option>
+                    <option value="ECE">ECE</option>
+                </select>
+                <div class="error" id="courseError">Branch/Course is required</div>
+            </div>
+            <div class="form-group">
+                <label for="classCode">Class Code (Section) *</label>
+                <input type="text" id="classCode" name="classCode" placeholder="Enter class code" required>
+                <div class="error" id="classCodeError">Class code is required</div>
+            </div>
+            <div class="form-group">
+                <label for="academicYear">Academic Year *</label>
+                <select id="academicYear" name="academicYear" required>
+                    <option value="" disabled selected>Select academic year</option>
+                    <option value="2024-2028">2024-2028</option>
+                    <option value="2025-2029">2025-2029</option>
+                    <option value="2026-2030">2026-2030</option>
+                </select>
+                <div class="error" id="academicYearError">Academic year is required</div>
+            </div>
+            <div class="form-group">
+                <label for="preferredClub">Preferred Club *</label>
+                <select id="preferredClub" name="preferredClub" required>
+                    <option value="" disabled selected>Select a club</option>
+                    <option value="Anchoring">Anchoring</option>
+                    <option value="Art and Sketching">Art and Sketching</option>
+                    <option value="Dance Club">Dance Club</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Kannada">Kannada</option>
+                    <option value="Literary">Literary</option>
+                    <option value="Music">Music</option>
+                    <option value="Photography">Photography</option>
+                    <option value="Theatre">Theatre</option>
+                </select>
+                <div class="error" id="preferredClubError">Please select a club</div>
+            </div>
+            <div class="form-group">
+                <label for="hobbies">List Your Hobbies</label>
+                <textarea id="hobbies" name="hobbies" placeholder="Enter your hobbies"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="clubInterest">Club Interest *</label>
+                <textarea id="clubInterest" name="clubInterest" placeholder="Why are you interested in this club?" required></textarea>
+                <div class="error" id="clubInterestError">Club interest is required</div>
+            </div>
+            <div class="form-group">
+                <label for="achievements">Achievements in the Chosen Field</label>
+                <textarea id="achievements" name="achievements" placeholder="List any relevant achievements"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="ambition">Ambition / Goal</label>
+                <textarea id="ambition" name="ambition" placeholder="Describe your ambitions or goals"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="socialLinks">Instagram / LinkedIn Profile Link</label>
+                <input type="url" id="socialLinks" name="socialLinks" placeholder="Enter profile link">
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="declaration" name="declaration" value="I agree" required>
+                <label for="declaration">I hereby declare that the information provided above is accurate and that I will uphold the code of conduct set by the Department of Student Affairs *</label>
+                <div class="error" id="declarationError">You must agree to the declaration</div>
+            </div>
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
